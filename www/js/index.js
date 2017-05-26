@@ -39,6 +39,19 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
+        var dims = document.getElementById("dims");
+        dims.innerText = screen.width+" x "+screen.height;
+
+        var os = document.getElementById("os");
+        var OSName = "Unknown OS";
+        if (navigator.userAgent.indexOf("Win") != -1) OSName="Windows";
+        if (navigator.userAgent.indexOf("Mac") != -1) OSName="Macintosh";
+        if (navigator.userAgent.indexOf("Linux") != -1) OSName="Linux";
+        if (navigator.userAgent.indexOf("Android") != -1) OSName="Android";
+        if (navigator.userAgent.indexOf("like Mac") != -1) OSName = "iOS";
+        os.innerText = OSName;
+        console.log('Your OS: ' + OSName);
+
         console.log('Received Event: ' + id);
     }
 };

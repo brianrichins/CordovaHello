@@ -97,6 +97,8 @@ h1 {
     display:none;
 }
 
+#info { margin-top: 12pt; }
+
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
